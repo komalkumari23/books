@@ -15,10 +15,11 @@ function App() {
     if (!token)
     token = localStorage.token = Math.random().toString(36).substr(-8)
 
-    const headers = {
+    const headers = { 
     'Accept': 'application/json',
     'Authorization': token
     }
+    //This func is for fetching books
     const getAll=async ()=>{
       try{
         let data=await fetch(`${api}/books`, { headers })
