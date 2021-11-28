@@ -4,7 +4,10 @@ import Card from './Component/Card';
 import Navbar from './Component/Navbar';
 
 
-function App() {
+import {Link} from 'react-router-dom'
+
+
+function App(props) {
   const [books, setBooks] = useState([])
   const [currentlyReading, setcurrentlyReading] = useState([])
   const [wantToRead, setwantToRead] = useState([]);
@@ -54,12 +57,16 @@ function App() {
      }
   return (
     < >
-      <Navbar/>
+      <Navbar email={props.email}/>
       <div className="container-fluid" style={{marginTop:"75px"}}>
-      <Card heading="Currently Reading" Reading={currentlyReading} getAll={getAll}/>
-      <Card heading="Want to Read" Reading={wantToRead} getAll={getAll}/>
-      <Card heading="Read" Reading={read} getAll={getAll}/>
+        <Card heading="Currently Reading" Reading={currentlyReading} getAll={getAll} id={"currentlyReading"}/>
+        <Card heading="Want to Read" Reading={wantToRead} getAll={getAll} id={"wantToRead"}/>
+        <Card heading="Read" Reading={read} getAll={getAll} id={"read"}/>
       </div>
+      <Link to="/search">
+        <div className="btn fixedbutton">+</div>
+        </Link>
+
     </>
   );
 }

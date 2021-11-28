@@ -2,9 +2,8 @@ import React from 'react'
 import Carditem from './Carditem'
 
 export default function Card(props) {
-    console.log(props.Reading,"test24")
     return (
-        <div style={{marginBottom:"165px"}}>
+        <div style={{marginBottom:"165px"}} id={props.id}>
             <h1>{props.heading}</h1>
             <hr></hr>
             <div className="d-flex flex-row justify-content-center " >

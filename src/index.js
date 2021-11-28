@@ -3,10 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Searchitem from './Component/Searchitem';
+import Login from './Component/Login';
+
+function MyApp () {
+  return(
+  <>
+  <Router>
+  <Switch>
+  <Route exact path="/"><Login/>
+          </Route>
+          <Route exact path="/search" component={Searchitem} >
+          </Route>
+
+        </Switch>
+  </Router>
+</>)
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
