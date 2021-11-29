@@ -59,12 +59,12 @@ function App(props) {
     < >
       <Navbar setemail={props.setemail}/>
       <div className="container-fluid" style={{marginTop:"75px"}}>
-        <Card heading="Currently Reading" Reading={currentlyReading} getAll={getAll} id={"currentlyReading"}/>
+        <Card heading="Currently Readingg" Reading={currentlyReading} getAll={getAll} id={"currentlyReading"}/>
         <Card heading="Want to Read" Reading={wantToRead} getAll={getAll} id={"wantToRead"}/>
         <Card heading="Read" Reading={read} getAll={getAll} id={"read"}/>
       </div>
-      <Link to="/search">
-        <div className="btn fixedbutton">+</div>
+      <Link to='/search'>
+        <div className="btn fixedbutton"></div>
         </Link>
 
     </>
