@@ -2,7 +2,11 @@ import React,{useState} from 'react';
 import {Link} from "react-router-dom";
 
 export default function Navbar(props) {
+    const handleClick=()=>{
+        sessionStorage.removeItem("accessToken");
+        props.setemail();
 
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
@@ -24,7 +28,7 @@ export default function Navbar(props) {
                         <li className="nav-item col-3">
                         <a className="nav-link active " href="#read" name="Read">Read</a>
                         </li>
-                        <li className="nav-item col-3" onClick={()=>{sessionStorage.removeItem("accessToken")}} style={{cursor:'pointer'}}>
+                        <li className="nav-item col-3" onClick={()=>{handleClick()}} style={{cursor:'pointer'}}>
                         <a className="nav-link active float-end" >Logout</a>
                         </li>
                     </ul>
@@ -34,4 +38,3 @@ export default function Navbar(props) {
         </div>
     )
 }
-

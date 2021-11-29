@@ -57,7 +57,7 @@ function App(props) {
      }
   return (
     < >
-      <Navbar email={props.email}/>
+      <Navbar setemail={props.setemail}/>
       <div className="container-fluid" style={{marginTop:"75px"}}>
         <Card heading="Currently Reading" Reading={currentlyReading} getAll={getAll} id={"currentlyReading"}/>
         <Card heading="Want to Read" Reading={wantToRead} getAll={getAll} id={"wantToRead"}/>

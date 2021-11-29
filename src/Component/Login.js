@@ -65,6 +65,7 @@ export default function Login() {
         setpassword("");
       });
   };
+  console.log(email,249)
   return (
     <>
     {(sessionStorage.getItem("accessToken")===null || sessionStorage.getItem("accessToken")==="" ) && (
@@ -130,7 +131,8 @@ export default function Login() {
       </div>
     )}
     {(sessionStorage.getItem("accessToken")!==null && sessionStorage.getItem("accessToken")!=="" ) && (
-      <div><App email={email}/></div>
+      <div><App setemail={setemail}/>
+      </div>
       )}
     </>
   );
