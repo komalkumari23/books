@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 
 export default function Navbar(props) {
@@ -29,7 +29,7 @@ export default function Navbar(props) {
                         <a className="nav-link active " href="#read" name="Read">Read</a>
                         </li>
                         <li className="nav-item col-3" onClick={()=>{handleClick()}} style={{cursor:'pointer'}}>
-                        <a className="nav-link active float-end" >Logout</a>
+                        <a className="nav-link active float-end" href="/" >Logout</a>
                         </li>
                     </ul>
                     </div>

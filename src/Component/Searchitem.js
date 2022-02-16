@@ -1,9 +1,15 @@
 import React,{useState} from 'react'
 import Carditem from './Carditem'
 import {Link} from 'react-router-dom'
+import lens from '../icons/lens.png'
+import Spinner from './Spinner'
 
 export default function Searchitem() {
     const [searchBook, setsearchBook] = useState();
+    const [value, setvalue] = useState("");
+    const [loader, setloader] = useState(false);
+
+    
     const api = "https://reactnd-books-api.udacity.com"
     // Generate a unique token for storing your bookshelf data on the backend server.
     let token = localStorage.token
@@ -16,6 +22,8 @@ export default function Searchitem() {
     }
 
     const handleChange=(e)=>{
+          setvalue(e.target.value)
+          setloader(true);
           search(e.target.value)  
     }
 
@@ -30,10 +38,11 @@ export default function Searchitem() {
                 body: JSON.stringify({ query })
               })
             let parsedData=await data.json()
-            setsearchBook(parsedData.books) 
+            setsearchBook(parsedData.books)
+            setloader(false)
         }
         catch(error){
-            console.log("The error is ",error)
+            alert(error)
         }
     }
     return (
@@ -54,7 +63,9 @@ export default function Searchitem() {
             </div>
             <div className="container my-3 search-books-results ">
             <div className="row" >
-            {searchBook?.map((element)=>{
+            {loader && <Spinner/>}
+            { !loader &&value!=="" && Array.isArray(searchBook) &&
+            searchBook.map((element)=>{
                 return(
                     <div className=" my-3 col-md-2 " key={element.id}>
                     <Carditem
@@ -62,11 +73,17 @@ export default function Searchitem() {
                     authors={element.authors}
                     imageLinks={element.imageLinks}
                     shelf={"None"}
-                    id={element.id}
-                    /> 
+                    id={element.id} />
                     </div>
               );
             })}
+            {  value!=="" && !Array.isArray(searchBook) && !loader &&
+                <div className='text-center img-lens'>
+                    <img src={lens} alt="lens" />
+                    <h4>Sorry we couldn't find any matches</h4>
+                    <h6>Please try searching with another term</h6>
+                </div>
+            }
             </div>
             </div>
         </div>

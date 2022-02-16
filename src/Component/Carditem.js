@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import { useHistory } from "react-router";
 
 export default function Carditem(props) {
