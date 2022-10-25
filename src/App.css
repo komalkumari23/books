@@ -1,0 +1,188 @@
+*{
+  margin:0;
+  padding: 0;   
+}
+
+
+.btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2e7d32;
+  background-image: url('./icons/add.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 0;
+  outline: 0;
+  }
+.btn:hover {
+    background-color: rgb(0, 102, 0);
+  }
+  
+.fixedbutton{
+  position: fixed;
+  bottom: 15px;
+  right: 15px; 
+}
+.book-shelf-changer {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #60ac5d;
+  background-image: url('./icons/arrow-drop-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.book-shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.search-books-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+}
+
+.search-books-input-wrapper {
+  flex: 1;
+  background: #e9e;
+}
+
+.search-books-bar input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+}
+
+.close-search {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background-image: url('./icons/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+  border: none;
+  outline: none;
+}
+
+button:active {
+  border: red;
+  outline: none;
+}
+.search-books-results {
+  padding: 80px 10px 20px;
+}
+
+
+*{
+  margin:0;
+  padding: 0;   
+}
+/* Login page starts */
+
+.hero1{
+  height:100%;
+  width:100%;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./icons/bg_image.webp);
+  background-position: center;
+  background-size:cover;
+  position:absolute;
+}
+.form-box1{
+  width:380px;
+  height:430px;
+  position:relative;
+  margin:6% auto;
+  background:#fff;
+  padding: 5px;
+  overflow: hidden;
+}
+.button-box1{
+  width:220px;
+  margin:35px auto;
+  position:relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius:30px;
+}
+.toggle-btn1{
+  padding: 10px 30px;
+  Cursor: pointer;
+  background: transparent;
+  border:0;
+  outline: none;
+  position:relative;
+}
+#btn{
+  top:0;
+  left:0;
+  position:absolute;
+  width:110px;
+  height:100%;
+  background:linear-gradient(to right,#ff105f,#ffad06);
+  border-radius:30px;
+  transition: .5s;
+}
+.input-group1{
+  top:130px;
+  position:absolute;
+  width:280px;
+  transition:.5s;
+}
+.input-field1{
+  width:100%;
+  padding: 10px 0;
+  margin:5px 0;
+  border-left:0;
+  border-top:0;
+  border-right:0;
+  border-bottom:1px solid #999;
+  outline:none;
+  background: transparent;
+}
+.input-group1>.submit-btn1{
+  width:85%;
+  padding: 10px 30px;
+  cursor:pointer;
+  display:block;
+  margin:auto;
+  background: linear-gradient(to right,#ff105f,#ffad06);
+  border:0;
+  outline: none;
+  border-radius: 30px;
+  margin-top: 50px;
+}
+#login{
+  left:50px;
+}
+#signup{
+  left:450px;
+}
+
+.img-lens{
+  margin-top:150px;
+}
+
+.img-lens img{
+  width:100px;
+  height:100px
+}
